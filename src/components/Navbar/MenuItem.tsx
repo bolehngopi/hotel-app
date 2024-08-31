@@ -9,12 +9,13 @@ interface MenuItemProps {
 
 const MenuItem: React.FC<MenuItemProps> = ({ onClick, label }) => {
   return (
-    <div
+    <button
       onClick={onClick}
       className="px-4 py-3 hover:bg-neutral-100 transition font-semibold"
+      aria-label={label}
     >
       {label}
-    </div>
+    </button>
   );
 };
 
