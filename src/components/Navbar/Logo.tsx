@@ -9,19 +9,16 @@ const Logo = () => {
   return (
     <div
       onClick={() => router.push("/")}
-      className="flex items-center cursor-pointer gap-2"
-      aria-label="Navigate to homepage"
+      className="flex items-center cursor-pointer"
     >
       <Image
-        className="hidden md:block"
-        src="/images/logo.jpg"
-        alt="TrauBall Logo"
-        width="50"
+        className="hidden md:block "
+        src="/images/logo.svg"
         height="50"
-        layout="fixed"
-        priority
+        width="50"
+        alt="Logo"
       />
-      <span className="travball">TrauBall</span>
+      <span className="travella">Travella</span>
     </div>
   );
 };

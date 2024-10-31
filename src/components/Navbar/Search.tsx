@@ -1,23 +1,19 @@
-import { FaSearch } from "react-icons/fa";
+import { BiSearch } from "react-icons/bi";
 
 const Search = () => {
   return (
     <div
       className="
-        border border-gray-300
+        border-[1px]
         w-full
         md:w-auto
         py-2
         rounded-full
         shadow-sm
         hover:shadow-md
-        dark:bg-white
-        dark:text-black
-        dark:hover:shadow-white
         transition
         cursor-pointer
       "
-      aria-label="Search Component"
     >
       <div
         className="
@@ -27,36 +23,30 @@ const Search = () => {
           justify-between
         "
       >
-        <button
+        <div
           className="
             text-sm 
             font-semibold 
             px-6
-            bg-transparent
-            focus:outline-none
           "
-          aria-label="Location"
         >
           Location Label
-        </button>
+        </div>
 
-        <button
+        <div
           className="
             hidden 
             sm:block 
             text-sm 
             font-semibold 
             px-6 
-            border-x border-gray-300
+            border-x-[1px] 
             flex-1 
             text-center
-            bg-transparent
-            focus:outline-none
           "
-          aria-label="Duration"
         >
           Duration Label
-        </button>
+        </div>
 
         <div
           className="
@@ -70,24 +60,17 @@ const Search = () => {
             gap-3
           "
         >
-          <button
-            className="hidden sm:block bg-transparent focus:outline-none"
-            aria-label="Guest"
-          >
-            Guest Label
-          </button>
-          <button
+          <div className="hidden sm:block"> Guest Label</div>
+          <div
             className="
               p-2
-              bg-black
+              bg-rose-500
               rounded-full
               text-white
-              focus:outline-none
             "
-            aria-label="Search"
           >
-            <FaSearch size={18} />
-          </button>
+            <BiSearch size={18} />
+          </div>
         </div>
       </div>
     </div>
