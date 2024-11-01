@@ -3,8 +3,14 @@ import Logo from "./Logo";
 import Search from "@/components/Navbar/Search";
 import UserMenu from "./UserMenu";
 import Categories from "@/components/Navbar/Categories";
+import { SafeUser } from "@/types";
+import React from "react";
 
-const Navbar = () => {
+interface NavbarProps {
+  currentUser?: SafeUser | null;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ currentUser }) => {
   return (
     <div className="fixed w-full bg-white z-10 shadow-sm">
       <div className="py-4 border-b-[1px]">
@@ -15,7 +21,7 @@ const Navbar = () => {
           >
             <Logo />
             <Search />
-            <UserMenu />
+            <UserMenu currentUser={currentUser} />
           </div>
         </Container>
       </div>

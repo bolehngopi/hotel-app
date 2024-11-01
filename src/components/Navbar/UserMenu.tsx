@@ -5,7 +5,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
-// import { SafeUser } from "@/types";
+import { SafeUser } from "@/types";
 
 import MenuItem from "./MenuItem";
 import Avatar from "../Avatar";
@@ -14,8 +14,7 @@ import useRegisterModal from "@/hooks/useRegisterModal";
 import useRentModal from "@/hooks/useRentModal";
 
 interface UserMenuProps {
-  // currentUser?: SafeUser | null;
-  currentUser?: null;
+  currentUser?: SafeUser | null;
 }
 
 const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
