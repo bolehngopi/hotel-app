@@ -6,6 +6,7 @@ import FacebookProvider from "next-auth/providers/facebook";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { PrismaClient } from "@prisma/client";
 import type { Adapter } from "next-auth/adapters";
+
 const prisma = new PrismaClient();
 
 export const authOptions: AuthOptions = {
