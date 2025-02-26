@@ -9,8 +9,6 @@ declare global {
   var cloudinary: any;
 }
 
-const uploadPreset = 'qmyjbmkc';
-
 interface ImageUploadProps {
   onChange: (value: string) => void;
   value: string;
@@ -26,8 +24,8 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onChange, value }) => {
 
   return (
     <CldUploadWidget
-      onUpload={handleUpload}
-      uploadPreset={uploadPreset}
+      uploadPreset={process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}
+      onSuccess={handleUpload}
       options={{
         maxFiles: 1,
       }}>
