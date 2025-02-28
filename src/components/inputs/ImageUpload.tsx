@@ -24,7 +24,13 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onChange, value }) => {
 
   return (
     <CldUploadWidget
-      uploadPreset={process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}
+      config={{
+        cloud: {
+          cloudName: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
+          apiKey: process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY,
+        }
+      }}
+      uploadPreset={process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_PRESET}
       onSuccess={handleUpload}
       options={{
         maxFiles: 1,
